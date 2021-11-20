@@ -8,6 +8,24 @@ TagManager:
   - LevelController
   - UIController
   - Elmas
+  - DegersizEsya
+  - Missile
+  - ENGEL
+  - FinishCizgisi
+  - X10
+  - Ramp
+  - X8
+  - X2
+  - X9
+  - X6
+  - X7
+  - X4
+  - X3
+  - X1
+  - BitirmeCizgisi
+  - X5
+  - AtesHatti
+  - Enemy
   layers:
   - Default
   - TransparentFX
