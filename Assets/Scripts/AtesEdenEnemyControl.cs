@@ -6,7 +6,7 @@ using UnityEngine.Animations;
 public class AtesEdenEnemyControl : MonoBehaviour
 {
     [SerializeField] GameObject mermiObjesi;
-    [SerializeField] GameObject mermiAtýsFX;
+    [SerializeField] GameObject mermiAtesFX;
     [SerializeField] Animator enemyAnimator;
 
     private bool mermiAtesle;
@@ -26,7 +26,7 @@ public class AtesEdenEnemyControl : MonoBehaviour
     void Update()
     {
         karakterAtesEtsin = true;
-   
+
         if (karakterAtesEtsin == true)
         {
             if (mermiAtesle == true)
@@ -43,31 +43,31 @@ public class AtesEdenEnemyControl : MonoBehaviour
         }
     }
 
- /*   private void OnTriggerEnter(Collider other)
+    /*   private void OnTriggerEnter(Collider other)
+       {
+           Debug.Log("girdi");
+           if (other.tag == "Player")
+           {
+               karakterAtesEtsin = true;
+               mermiAtesle = true;
+           }
+       }
+       private void OnTriggerExit(Collider other)
+       {
+           Debug.Log("??kt?");
+           if (other.tag == "Player")
+           {
+               karakterAtesEtsin = false;
+           }
+       }*/
+    IEnumerator mermiatesleme()
     {
-        Debug.Log("girdi");
-        if (other.tag == "Player")
-        {
-            karakterAtesEtsin = true;
-            mermiAtesle = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("çýktý");
-        if (other.tag == "Player")
-        {
-            karakterAtesEtsin = false;
-        }
-    }*/
-   IEnumerator mermiatesleme() 
-    {
-    
+
         tempMermi = Instantiate(mermiObjesi, new Vector3(-100f, -100f, -100f), Quaternion.identity);
         tempMermi.transform.parent = transform.parent;
         tempMermi.transform.localPosition = new Vector3(0f, 0f, -0.5f);
 
-        tempFX = Instantiate(mermiAtýsFX, new Vector3(-100f, -100f, -100f), Quaternion.identity);
+        tempFX = Instantiate(mermiAtesFX, new Vector3(-100f, -100f, -100f), Quaternion.identity);
         tempFX.transform.parent = transform.parent;
         tempFX.transform.localPosition = new Vector3(0f, 3f, -1.5f);
         yield return new WaitForSeconds(.5f);
