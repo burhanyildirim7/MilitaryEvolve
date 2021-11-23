@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mermiObjesi: {fileID: 6835794717989716697, guid: 697b05f3c94dc6c4e8bb720809286df5, type: 3}
-  "mermiAt\u0131sFX": {fileID: 3184719695301995180, guid: be1b577c481290843815272a00b91092, type: 3}
+  mermiAtesFX: {fileID: 0}
   enemyAnimator: {fileID: 1944237494053710546}
 --- !u!54 &6608426090370234094
 Rigidbody:
@@ -251,18 +251,6 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -323,18 +311,6 @@ PrefabInstance:
     - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1927833133532905258, guid: ae4df50e926625f41b9556ae5bc9c6ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,10 +414,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4705849531163260652, guid: 2a72828dcd3d70a4faa670ba348abc9e, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 80dd7e1cfacb739418f716e66f4ea2c4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a72828dcd3d70a4faa670ba348abc9e, type: 3}
 --- !u!4 &5966857315735800624 stripped
