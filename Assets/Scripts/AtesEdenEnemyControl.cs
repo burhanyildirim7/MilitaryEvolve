@@ -8,6 +8,8 @@ public class AtesEdenEnemyControl : MonoBehaviour
     [SerializeField] GameObject mermiObjesi;
     [SerializeField] GameObject mermiAtesFX;
     [SerializeField] Animator enemyAnimator;
+    [SerializeField] float missileSpeed;
+
 
     private bool mermiAtesle;
     private bool karakterAtesEtsin;
@@ -20,12 +22,12 @@ public class AtesEdenEnemyControl : MonoBehaviour
         enemyAnimator.SetBool("AyaktaAsker", true);
         mermiAtesle = false;
         karakterAtesEtsin = false;
-        mermiAtesle = true;
+       // mermiAtesle = true;
     }
 
     void Update()
     {
-        karakterAtesEtsin = true;
+        //karakterAtesEtsin = true;
 
         if (karakterAtesEtsin == true)
         {
@@ -43,10 +45,10 @@ public class AtesEdenEnemyControl : MonoBehaviour
         }
     }
 
-    /*   private void OnTriggerEnter(Collider other)
+      private void OnTriggerEnter(Collider other)
        {
            Debug.Log("girdi");
-           if (other.tag == "Player")
+        if (other.tag == "Player" )
            {
                karakterAtesEtsin = true;
                mermiAtesle = true;
@@ -58,8 +60,9 @@ public class AtesEdenEnemyControl : MonoBehaviour
            if (other.tag == "Player")
            {
                karakterAtesEtsin = false;
-           }
-       }*/
+             
+        }
+       }
     IEnumerator mermiatesleme()
     {
 
@@ -70,7 +73,12 @@ public class AtesEdenEnemyControl : MonoBehaviour
         tempFX = Instantiate(mermiAtesFX, new Vector3(-100f, -100f, -100f), Quaternion.identity);
         tempFX.transform.parent = transform.parent;
         tempFX.transform.localPosition = new Vector3(0f, 3f, -1.5f);
-        yield return new WaitForSeconds(.5f);
+        tempFX.transform.parent = null;
+        yield return new WaitForSeconds(missileSpeed);
         mermiAtesle = true;
+        if (karakterAtesEtsin == false)
+        {
+            mermiAtesle = false;
+        }
     }
 }

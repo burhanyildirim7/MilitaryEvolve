@@ -36,6 +36,7 @@ public class EnemyMermiKontrol : MonoBehaviour
             PlayeraCarpmaFX.GetComponent<ParticleSystem>().Play();
             yenidenAtesle = true;
             playerVurulma = true;
+            transform.parent = null;
             Destroy(gameObject, 1);
         }
         else
@@ -51,6 +52,7 @@ public class EnemyMermiKontrol : MonoBehaviour
             if (playeraCarptiControl == false)
             {
                 yenidenAtesle = true;
+                transform.parent = null;
                 Destroy(gameObject);
             }
             else

@@ -7,13 +7,16 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
 
-    [SerializeField] private int _iyiToplanabilirDeger;
+    [SerializeField] private int RankArtisDegeri;
 
-    [SerializeField] private int _kötüToplanabilirDeger;
+   // [SerializeField] private int _kötüToplanabilirDeger;
 
     [SerializeField] private GameObject _karakterPaketi;
+    [SerializeField] Text RankText;
+    [SerializeField] Slider RankSlider;
 
-    private int _elmasSayisi;
+    private int rutbeSayisi;
+    private int sliderSayac;
 
     private GameObject _player;
 
@@ -28,6 +31,10 @@ public class PlayerController : MonoBehaviour
         LevelStart();
 
         _uiController = GameObject.Find("UIController").GetComponent<UIController>();
+        rutbeSayisi = 1;
+        sliderSayac = 1;
+        RankSlider.value = sliderSayac;
+        RankText.text ="Rank 1";
 
     }
 
@@ -37,12 +44,29 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
   
-        if (other.tag == "Elmas")
+        if (other.tag == "Rutbe")
         {
-            _elmasSayisi += 1;
-            _toplananElmasSayisi += 1;
-            PlayerPrefs.SetInt("ElmasSayisi", _elmasSayisi);
+            rutbeSayisi = rutbeSayisi + RankArtisDegeri;
+            RankText.text = "Rank " + rutbeSayisi.ToString();
+            sliderSayac++;
+            if (sliderSayac>5)
+            {
+                sliderSayac = 1;
+            }
+            RankSlider.value = sliderSayac;
+
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "Obstacles" || other.tag == "Missile")
+        {
+            rutbeSayisi = rutbeSayisi - RankArtisDegeri;
+            RankText.text = "Rank " + rutbeSayisi.ToString();
+            sliderSayac--;
+            if (sliderSayac < 1)
+            {
+                sliderSayac = 5;
+            }
+            RankSlider.value = sliderSayac;
         }
         else
         {
@@ -66,7 +90,6 @@ public class PlayerController : MonoBehaviour
     public void LevelStart()
     {
         _toplananElmasSayisi = 1;
-        _elmasSayisi = PlayerPrefs.GetInt("ElmasSayisi");
         _karakterPaketi.transform.position = new Vector3(0, 0, 0);
         _karakterPaketi.transform.rotation = Quaternion.Euler(0, 0, 0);
         _player = GameObject.FindWithTag("Player");
