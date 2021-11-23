@@ -26,6 +26,9 @@ TagManager:
   - X5
   - AtesHatti
   - Enemy
+  - Rutbe
+  - CollectAsker
+  - Obstacles
   layers:
   - Default
   - TransparentFX
