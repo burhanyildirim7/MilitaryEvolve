@@ -14,7 +14,6 @@ public class CollectableAskerScript : MonoBehaviour
     void Start()
     {
         stackAskerAnim = transform.GetComponent<Animator>();
-        collectedAsker = false;
         agent = GetComponent<NavMeshAgent>();
         //  player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -22,10 +21,10 @@ public class CollectableAskerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(collectedAsker);
         if (collectedAsker == true)
         { Debug.Log("girdim : " +player.name);
             agent.SetDestination(player.transform.position);
-            gameObject.GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 
