@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private int RankArtisDegeri;
 
-   // [SerializeField] private int _kötüToplanabilirDeger;
+    // [SerializeField] private int _kötüToplanabilirDeger;
 
     [SerializeField] private GameObject _karakterPaketi;
     [SerializeField] Text RankText;
@@ -24,6 +24,12 @@ public class PlayerController : MonoBehaviour
 
     private int _toplananElmasSayisi;
 
+    public static bool zirhliSag;
+    public static bool zirhliSol;
+    public static bool heliSag;
+    public static bool heliSol;
+    public static bool tankSag;
+    public static bool tankSol;
 
 
     void Start()
@@ -34,7 +40,14 @@ public class PlayerController : MonoBehaviour
         rutbeSayisi = 1;
         sliderSayac = 1;
         RankSlider.value = sliderSayac;
-        RankText.text ="Rank 1";
+        RankText.text = "Rank 1";
+
+        zirhliSag = false;
+        zirhliSol = false;
+        heliSag = false;
+        heliSol = false;
+        tankSag = false;
+        tankSol = false;
 
     }
 
@@ -43,13 +56,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-  
+
         if (other.tag == "Rutbe")
         {
             rutbeSayisi = rutbeSayisi + RankArtisDegeri;
             RankText.text = "Rank " + rutbeSayisi.ToString();
             sliderSayac++;
-            if (sliderSayac>5)
+            if (sliderSayac > 5)
             {
                 sliderSayac = 1;
             }
@@ -72,6 +85,8 @@ public class PlayerController : MonoBehaviour
         {
 
         }
+
+
     }
 
     private void WinScreenAc()
@@ -85,7 +100,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    
+
 
     public void LevelStart()
     {
@@ -93,9 +108,9 @@ public class PlayerController : MonoBehaviour
         _karakterPaketi.transform.position = new Vector3(0, 0, 0);
         _karakterPaketi.transform.rotation = Quaternion.Euler(0, 0, 0);
         _player = GameObject.FindWithTag("Player");
-        _player.transform.localPosition = new Vector3(0, 1, 0);
+        _player.transform.localPosition = new Vector3(0, 0, 0);
     }
-    
+
 
 
 }

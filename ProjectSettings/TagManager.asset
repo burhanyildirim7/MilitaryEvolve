@@ -29,6 +29,9 @@ TagManager:
   - Rutbe
   - CollectAsker
   - Obstacles
+  - multiplyKapisi
+  - evrimKapisi
+  - zirhli
   layers:
   - Default
   - TransparentFX
