@@ -4364,7 +4364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83a6f3f10ed54a8eaca5f7c7fa443cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swerveSpeed: 1
+  swerveSpeed: 0.75
   _getPoint: {fileID: 326513068}
   _radius: 6
 --- !u!114 &1443049513
