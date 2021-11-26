@@ -79,7 +79,7 @@ public class EvrimKapisiScript : MonoBehaviour
             }
             else
             {
-                if (GameObject.Find("StackAskerParent").transform.childCount > 5)
+                if (GameObject.Find("StackAskerParent").transform.childCount >= 5)
                 {
                     if (zirhli)
                     {
@@ -125,7 +125,7 @@ public class EvrimKapisiScript : MonoBehaviour
                             GameObject tempObject = Instantiate(savasAraclari[2], new Vector3(100, 100, 100), Quaternion.identity);
                             //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
                             tempObject.transform.position = new Vector3(4, 5, other.gameObject.transform.position.z - 5f);
-                            //tempObject.transform.parent = null;
+                            tempObject.transform.parent = other.gameObject.transform;
                             PlayerController.heliSag = true;
                         }
                         else if (PlayerController.heliSol == false)

@@ -16,7 +16,7 @@ public class HeliScript : MonoBehaviour
     {
         if (GameController._oyunAktif == true && GameController._finishCizgisi == false)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * _speed);
+           // transform.Translate(Vector3.forward * Time.deltaTime * _speed);
         }
         else if (GameController._oyunBitti == true)
         {
