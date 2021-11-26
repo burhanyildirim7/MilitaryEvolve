@@ -36,6 +36,7 @@ public class CollectableAskerScript : MonoBehaviour
         if (collectedAsker == true && GameController._finishCizgisi == false && _öldü == false)
         {
             Debug.Log("girdim : " + player.name);
+            player = GameObject.FindGameObjectWithTag("Takip1");
             agent.SetDestination(player.transform.position);
         }
 
@@ -68,7 +69,7 @@ public class CollectableAskerScript : MonoBehaviour
         {
             Debug.Log("playera dokundu calısıyor.");
             gameObject.GetComponent<BoxCollider>().isTrigger = false;
-            gameObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+            gameObject.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
             gameObject.transform.localPosition = new Vector3(0, 0, 0);
             transform.rotation = Quaternion.Euler(0, 0, 0);
             gameObject.transform.parent = GameObject.Find("StackAskerParent").transform;

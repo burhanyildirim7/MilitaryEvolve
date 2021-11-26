@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.991
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.47683287, g: 0.79696906, b: 0.8971344, a: 0.991}
+  m_IndirectSpecularColor: {r: 0.4763121, g: 0.7961868, b: 0.8949129, a: 0.991}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -296,7 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157753750
 GameObject:
@@ -651,7 +651,7 @@ RectTransform:
   - {fileID: 1281464365}
   - {fileID: 1205790765}
   m_Father: {fileID: 1443049508}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -905,7 +905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489310445 stripped
 GameObject:
@@ -1131,7 +1131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602011003
 GameObject:
@@ -1145,6 +1145,7 @@ GameObject:
   - component: {fileID: 602011007}
   - component: {fileID: 602011006}
   - component: {fileID: 602011005}
+  - component: {fileID: 602011008}
   m_Layer: 0
   m_Name: Takip2
   m_TagString: Takip2
@@ -1163,8 +1164,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1443049508}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &602011005
 BoxCollider:
@@ -1229,6 +1230,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602011003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &602011008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602011003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67bbecc5adee347ffb191bd86c33fac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _takip1: 0
+  _takip2: 1
+  _takip3: 0
 --- !u!1 &612354400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1408,7 @@ GameObject:
   - component: {fileID: 656448750}
   - component: {fileID: 656448749}
   - component: {fileID: 656448748}
+  - component: {fileID: 656448751}
   m_Layer: 0
   m_Name: Takip1
   m_TagString: Takip1
@@ -1410,8 +1427,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1443049508}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &656448748
 BoxCollider:
@@ -1476,6 +1493,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656448746}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &656448751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656448746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67bbecc5adee347ffb191bd86c33fac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _takip1: 1
+  _takip2: 0
+  _takip3: 0
 --- !u!1 &672005776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1762,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &769064051
 GameObject:
@@ -2327,7 +2359,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -2530,7 +2562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &992128088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2792,7 +2824,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194281964
 GameObject:
@@ -2914,7 +2946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1205790765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3085,6 +3117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankDusenMermisi
       objectReference: {fileID: 0}
+    - target: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 490358, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3168,7 +3204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1233947544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3388,7 +3424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1281464365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3823,7 +3859,7 @@ Transform:
   - {fileID: 1826460907}
   - {fileID: 26822865}
   m_Father: {fileID: 1443049508}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361820721
 GameObject:
@@ -4247,9 +4283,6 @@ Transform:
   - {fileID: 1239750710}
   - {fileID: 1553333077}
   - {fileID: 1555205589}
-  - {fileID: 656448747}
-  - {fileID: 602011004}
-  - {fileID: 1654209206}
   - {fileID: 344411975}
   - {fileID: 1356573845}
   m_Father: {fileID: 2018247888}
@@ -4384,6 +4417,11 @@ MonoBehaviour:
   - {fileID: 527368891}
   - {fileID: 1221196883}
   _oyunSonuBelirlemeObjesi: {fileID: 1841644247}
+  "_r\xFCtbeListesi":
+  - {fileID: 1233947543}
+  - {fileID: 992128087}
+  - {fileID: 1281464364}
+  - {fileID: 1205790764}
 --- !u!114 &1443049516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4935,6 +4973,7 @@ GameObject:
   - component: {fileID: 1654209209}
   - component: {fileID: 1654209208}
   - component: {fileID: 1654209207}
+  - component: {fileID: 1654209210}
   m_Layer: 0
   m_Name: Takip3
   m_TagString: Takip3
@@ -4953,8 +4992,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1443049508}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1654209207
 BoxCollider:
@@ -5019,6 +5058,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654209205}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1654209210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654209205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67bbecc5adee347ffb191bd86c33fac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _takip1: 0
+  _takip2: 0
+  _takip3: 1
 --- !u!1 &1670124654
 GameObject:
   m_ObjectHideFlags: 0
@@ -6092,7 +6146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2063141236
 MonoBehaviour:
@@ -6109,6 +6163,10 @@ MonoBehaviour:
   _leveller:
   - {fileID: 3957086651824325179, guid: eaf791781aa03fe4295a1bbf7117f8dc, type: 3}
   - {fileID: 2954259697843213224, guid: d274b29e18e315f439e5277346f50304, type: 3}
+  - {fileID: 8121850064101118580, guid: 8ef4d21142122d8468f095f30e30cc32, type: 3}
+  - {fileID: 39008352375227207, guid: b785c20813fd60b4593aa009d39fa74f, type: 3}
+  - {fileID: 9177331225080387367, guid: 862fbb10c79b8fe458bcd40fb75e206c, type: 3}
+  - {fileID: 2555645895215488510, guid: 0c156933913f0fc4a98c3013f5a3a19f, type: 3}
   - {fileID: 8121850064101118580, guid: 8ef4d21142122d8468f095f30e30cc32, type: 3}
   - {fileID: 39008352375227207, guid: b785c20813fd60b4593aa009d39fa74f, type: 3}
   - {fileID: 9177331225080387367, guid: 862fbb10c79b8fe458bcd40fb75e206c, type: 3}

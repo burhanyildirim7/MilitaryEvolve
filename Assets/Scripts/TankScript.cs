@@ -30,6 +30,7 @@ public class TankScript : MonoBehaviour
     {
         if (_death == false && GameController._finishCizgisi == false)
         {
+            player = GameObject.FindGameObjectWithTag("Takip3");
             agent.SetDestination(player.transform.position);
         }
 

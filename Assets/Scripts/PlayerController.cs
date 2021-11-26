@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject _oyunSonuBelirlemeObjesi;
 
+    [SerializeField] private List<GameObject> _rütbeListesi = new List<GameObject>();
+
 
     public static int rutbeSayisi;
     private int sliderSayac;
@@ -86,6 +88,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[0].SetActive(true);
 
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[0].SetActive(true);
+
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
                     _karakterAnimator.SetBool("Run", true);
@@ -96,6 +103,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[2].SetActive(false);
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[1].SetActive(true);
+
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[1].SetActive(true);
 
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
@@ -108,6 +120,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[2].SetActive(true);
 
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[2].SetActive(true);
+
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
                     _karakterAnimator.SetBool("Run", true);
@@ -118,6 +135,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[1].SetActive(false);
                     _karakterListesi[2].SetActive(false);
                     _karakterListesi[3].SetActive(true);
+
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(true);
 
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
@@ -159,6 +181,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[0].SetActive(true);
 
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[0].SetActive(true);
+
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
                     _karakterAnimator.SetBool("Run", true);
@@ -169,6 +196,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[2].SetActive(false);
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[1].SetActive(true);
+
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[1].SetActive(true);
 
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
@@ -181,6 +213,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[3].SetActive(false);
                     _karakterListesi[2].SetActive(true);
 
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[3].SetActive(false);
+                    _rütbeListesi[2].SetActive(true);
+
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
                     _karakterAnimator.SetBool("Run", true);
@@ -191,6 +228,11 @@ public class PlayerController : MonoBehaviour
                     _karakterListesi[1].SetActive(false);
                     _karakterListesi[2].SetActive(false);
                     _karakterListesi[3].SetActive(true);
+
+                    _rütbeListesi[0].SetActive(false);
+                    _rütbeListesi[1].SetActive(false);
+                    _rütbeListesi[2].SetActive(false);
+                    _rütbeListesi[3].SetActive(true);
 
                     _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
                     _karakterAnimator.SetBool("Idle", false);
@@ -285,6 +327,10 @@ public class PlayerController : MonoBehaviour
         _karakterListesi[2].SetActive(false);
         _karakterListesi[3].SetActive(false);
         _karakterListesi[0].SetActive(true);
+        _rütbeListesi[1].SetActive(false);
+        _rütbeListesi[2].SetActive(false);
+        _rütbeListesi[3].SetActive(false);
+        _rütbeListesi[0].SetActive(true);
         _karakterAnimator = GameObject.FindGameObjectWithTag("Karakter").GetComponent<Animator>();
         _karakterAnimator.SetBool("Attack", false);
         _karakterAnimator.SetBool("Death", false);

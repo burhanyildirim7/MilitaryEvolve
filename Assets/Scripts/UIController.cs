@@ -31,6 +31,9 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
+
+        // PlayerPrefs.SetInt("OyunBasladi", 0);
+
         _tapToStartPanel.SetActive(true);
 
         _levelNumber = PlayerPrefs.GetInt("LevelNumber");

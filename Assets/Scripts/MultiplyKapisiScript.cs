@@ -29,7 +29,7 @@ public class MultiplyKapisiScript : MonoBehaviour
             {
 
                 GameObject tempAsker = Instantiate(CollectAskeriPrefab, new Vector3(100, 100, 100), Quaternion.identity);
-                tempAsker.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                tempAsker.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
                 tempAsker.transform.localPosition = new Vector3(0, 1, -3);
                 tempAsker.transform.parent = GameObject.Find("StackAskerParent").transform;
 

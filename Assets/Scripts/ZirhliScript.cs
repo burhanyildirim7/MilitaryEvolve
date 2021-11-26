@@ -30,6 +30,7 @@ public class ZirhliScript : MonoBehaviour
     {
         if (_death == false && GameController._finishCizgisi == false)
         {
+            player = GameObject.FindGameObjectWithTag("Takip2");
             agent.SetDestination(player.transform.position);
         }
 

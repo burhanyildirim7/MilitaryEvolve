@@ -58,7 +58,7 @@ public class EvrimKapisiScript : MonoBehaviour
                         //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
                         if (PlayerController.tankSag == false)
                         {
-                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
                             tempObject.transform.localPosition = new Vector3(1, 1, -6);
                             tempObject.transform.parent = null;
                             PlayerController.tankSag = true;
@@ -67,7 +67,7 @@ public class EvrimKapisiScript : MonoBehaviour
                         }
                         else
                         {
-                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
                             tempObject.transform.localPosition = new Vector3(-1, 1, -6);
                             tempObject.transform.parent = null;
                             PlayerController.tankSol = true;
@@ -90,7 +90,7 @@ public class EvrimKapisiScript : MonoBehaviour
                                 Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
                             GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
-                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
                             tempObject.transform.localPosition = new Vector3(1, 1, -6);
                             tempObject.transform.parent = GameObject.Find("StackZirhliParent").transform;
                             //tempObject.transform.parent = null;
@@ -103,7 +103,7 @@ public class EvrimKapisiScript : MonoBehaviour
                                 Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
                             GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
-                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.parent = GameObject.FindGameObjectWithTag("Takip1").transform;
                             tempObject.transform.localPosition = new Vector3(-1, 1, -6);
                             tempObject.transform.parent = GameObject.Find("StackZirhliParent").transform;
                             //tempObject.transform.parent = null;
@@ -124,8 +124,9 @@ public class EvrimKapisiScript : MonoBehaviour
                             }
                             GameObject tempObject = Instantiate(savasAraclari[2], new Vector3(100, 100, 100), Quaternion.identity);
                             //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
-                            tempObject.transform.position = new Vector3(4, 5, other.gameObject.transform.position.z - 5f);
                             tempObject.transform.parent = other.gameObject.transform;
+                            tempObject.transform.localPosition = new Vector3(3, 5, -5f);
+
                             PlayerController.heliSag = true;
                         }
                         else if (PlayerController.heliSol == false)
@@ -136,7 +137,9 @@ public class EvrimKapisiScript : MonoBehaviour
                             }
                             GameObject tempObject = Instantiate(savasAraclari[2], new Vector3(100, 100, 100), Quaternion.identity);
                             //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
-                            tempObject.transform.position = new Vector3(-4, 5, other.gameObject.transform.position.z - 5f);
+                            tempObject.transform.parent = other.gameObject.transform;
+                            tempObject.transform.localPosition = new Vector3(-3, 5, -5f);
+
                             //tempObject.transform.parent = null;
                             PlayerController.heliSag = true;
 
