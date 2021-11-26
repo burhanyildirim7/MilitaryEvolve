@@ -50,21 +50,29 @@ public class EvrimKapisiScript : MonoBehaviour
                 {
                     if (PlayerController.tankSag == false || PlayerController.tankSol == false)
                     {
-                        Destroy(GameObject.Find("StackZirhliParent").transform.GetChild(0));
-                        Destroy(GameObject.Find("StackZirhliParent").transform.GetChild(1));
+                        Destroy(GameObject.Find("StackZirhliParent").transform.GetChild(0).gameObject);
+                        Destroy(GameObject.Find("StackZirhliParent").transform.GetChild(1).gameObject);
                         GameObject tempObject = Instantiate(savasAraclari[0], new Vector3(100, 100, 100), Quaternion.identity);
-                        tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
+
+                        // PlayerController._askeriGuc -= 10;
+                        //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
                         if (PlayerController.tankSag == false)
                         {
-                            tempObject.transform.localPosition = new Vector3(4.5f, 1, 0);
+                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.localPosition = new Vector3(1, 1, -6);
                             tempObject.transform.parent = null;
                             PlayerController.tankSag = true;
+
+                            //PlayerController._askeriGuc += 10;
                         }
                         else
                         {
-                            tempObject.transform.localPosition = new Vector3(-4.5f, 1, 0);
+                            tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
+                            tempObject.transform.localPosition = new Vector3(-1, 1, -6);
                             tempObject.transform.parent = null;
                             PlayerController.tankSol = true;
+
+                            //PlayerController._askeriGuc += 10;
                         }
                     }
                 }
@@ -79,26 +87,26 @@ public class EvrimKapisiScript : MonoBehaviour
                         {
                             for (int i = 0; i < 5; i++)
                             {
-                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(GameObject.Find("StackAskerParent").transform.childCount - 1));
+                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
                             GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
                             tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
-                            tempObject.transform.localPosition = new Vector3(1.25f, 1, -6);
+                            tempObject.transform.localPosition = new Vector3(1, 1, -6);
                             tempObject.transform.parent = GameObject.Find("StackZirhliParent").transform;
-                            tempObject.transform.parent = null;
+                            //tempObject.transform.parent = null;
                             PlayerController.zirhliSag = true;
                         }
                         else if (PlayerController.zirhliSol == false)
                         {
                             for (int i = 0; i < 5; i++)
                             {
-                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(GameObject.Find("StackAskerParent").transform.childCount - 1));
+                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
                             GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
                             tempObject.transform.parent = other.gameObject.transform.GetChild(8).transform;
-                            tempObject.transform.localPosition = new Vector3(-1.25f, 1, -6);
+                            tempObject.transform.localPosition = new Vector3(-1, 1, -6);
                             tempObject.transform.parent = GameObject.Find("StackZirhliParent").transform;
-                            tempObject.transform.parent = null;
+                            //tempObject.transform.parent = null;
                             PlayerController.zirhliSol = true;
                         }
                         else
@@ -112,24 +120,24 @@ public class EvrimKapisiScript : MonoBehaviour
                         {
                             for (int i = 0; i < 5; i++)
                             {
-                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(GameObject.Find("StackAskerParent").transform.childCount - 1));
+                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
-                            GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
-                            tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
-                            tempObject.transform.localPosition = new Vector3(4, 5, 1.5f);
-                            tempObject.transform.parent = null;
+                            GameObject tempObject = Instantiate(savasAraclari[2], new Vector3(100, 100, 100), Quaternion.identity);
+                            //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
+                            tempObject.transform.position = new Vector3(4, 5, other.gameObject.transform.position.z - 5f);
+                            //tempObject.transform.parent = null;
                             PlayerController.heliSag = true;
                         }
                         else if (PlayerController.heliSol == false)
                         {
                             for (int i = 0; i < 5; i++)
                             {
-                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(GameObject.Find("StackAskerParent").transform.childCount - 1));
+                                Destroy(GameObject.Find("StackAskerParent").gameObject.transform.GetChild(i).gameObject);
                             }
-                            GameObject tempObject = Instantiate(savasAraclari[1], new Vector3(100, 100, 100), Quaternion.identity);
-                            tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
-                            tempObject.transform.localPosition = new Vector3(-4, 5, 1.5f);
-                            tempObject.transform.parent = null;
+                            GameObject tempObject = Instantiate(savasAraclari[2], new Vector3(100, 100, 100), Quaternion.identity);
+                            //tempObject.transform.parent = other.gameObject.transform.parent.transform.GetChild(2).transform;
+                            tempObject.transform.position = new Vector3(-4, 5, other.gameObject.transform.position.z - 5f);
+                            //tempObject.transform.parent = null;
                             PlayerController.heliSag = true;
 
                         }

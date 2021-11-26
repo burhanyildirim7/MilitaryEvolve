@@ -32,6 +32,12 @@ TagManager:
   - multiplyKapisi
   - evrimKapisi
   - zirhli
+  - Takip1
+  - Takip2
+  - Takip3
+  - Karakter
+  - OyunSonuBelirlemeObjesi
+  - Bullet
   layers:
   - Default
   - TransparentFX

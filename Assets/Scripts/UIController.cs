@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text _winElmasText;
     [SerializeField] private Text _loseElmasText;
     [SerializeField] private Text _tapToStartElmasText;
+    [SerializeField] private Text _xDegeriText;
 
     private int _levelNumber;
 
@@ -57,17 +58,17 @@ public class UIController : MonoBehaviour
 
     }
 
-  
+
     void Update()
     {
         _levelNumber = PlayerPrefs.GetInt("LevelNumber");
 
         _elmasSayisi = PlayerPrefs.GetInt("ElmasSayisi");
 
-       
+
         _levelText.text = "LEVEL " + (_levelNumber);
-        
-        
+
+
         _elmasText.text = _elmasSayisi.ToString();
     }
 
@@ -76,13 +77,16 @@ public class UIController : MonoBehaviour
         GameController._oyunAktif = true;
         _tapToStartPanel.SetActive(false);
         _gameScreenPanel.SetActive(true);
+        _playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        _playerController.KarakterRun();
     }
 
-    public void WinScreenPanelOpen()
+    public void WinScreenPanelOpen(int deger)
     {
         _gameScreenPanel.SetActive(false);
         _winScreenPanel.SetActive(true);
         _winElmasText.text = _levelSonuElmasSayisi.ToString();
+        _xDegeriText.text = "X " + deger.ToString();
     }
 
     public void LoseScreenPanelOpen()
